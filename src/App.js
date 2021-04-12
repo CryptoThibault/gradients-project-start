@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import { gradients, uniqueTags } from './gradients';
 import React, { useState } from 'react';
 
-function App() {
+const App = () =>{
   const [gradientList, setGradientList] = useState(gradients);
 
   const filterGradients = (tag) => {
