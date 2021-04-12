@@ -5,6 +5,7 @@ const GradientsSelect = (props) => {
 
   return (
     <form>
+      <label className="input-group-text" for="select">Filtrer par tag</label>
       <select
         name='tags'
         id='tags'

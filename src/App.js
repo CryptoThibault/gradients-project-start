@@ -15,10 +15,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <GradientsHeader gradients={gradients} >
-        <h1 className='display-1 text-center my-4'>Alyra Gradients</h1>
-        <p className='tagline'>Ultime collection de plus beaux dégradés</p>
-      </GradientsHeader>
+      <GradientsHeader gradients={gradients} />
       <GradientsApp
         gradients={gradientList}
         uniqueTags={uniqueTags}
