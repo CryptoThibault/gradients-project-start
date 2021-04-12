@@ -3,8 +3,7 @@ import GradientCode from './GradientCode';
 import GradientPill from './GradientPill';
 import GradientTag from './GradientTag';
 
-const Gradient = (props) => {
-  const { colorStart, colorEnd, name, tags, filterGradients } = props;
+const Gradient = ({ colorStart, colorEnd, name, tags, filterGradients }) => {
   return (
     <div className='card p-3 mb-4 shadow'>
       <GradientPill colorStart={colorStart} colorEnd={colorEnd} />

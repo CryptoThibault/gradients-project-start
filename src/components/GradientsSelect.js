@@ -1,7 +1,6 @@
 import React from 'react';
 
-const GradientsSelect = (props) => {
-  const { uniqueTags, filterGradients } = props;
+const GradientsSelect = ({ uniqueTags, filterGradients }) => {
   return (
     <form>
       <div class="input-group mb-3" >
@@ -12,7 +11,6 @@ const GradientsSelect = (props) => {
           className='form-select form-select mb-0.5'
           onChange={(e) => filterGradients(e.target.value)}
         >
-
           {uniqueTags.map((tag) => {
             return (
               <option value={tag} key={tag}>
