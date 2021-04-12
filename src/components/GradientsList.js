@@ -1,29 +1,25 @@
-import Gradient from "./Gradient"
-const GradientsList = () => {
-  return (
-    <ul className="row list-unstyled">
-      <Gradient
-        colorStart="rgb(189, 195, 199)"
-        colorEnd="rgb(44, 62, 80)"
-        name="Grade Grey"
-      />
-      <Gradient
-        colorStart="rgb(31, 64, 55)"
-        colorEnd="rgb(153, 242, 200)"
-        name="Harvey"
-      />
-      <Gradient
-        colorStart="rgb(0, 242, 96)"
-        colorEnd="rgb(5, 117, 230)"
-        name="Rainbow Blue"
-      />
-      <Gradient
-        colorStart="rgb(168, 192, 255)"
-        colorEnd="rgb(63, 43, 150)"
-        name="Slight Ocean View"
-      />
-    </ul>
-  )
-}
+import Gradient from './Gradient';
 
-export default GradientsList
+const GradientsList = (props) => {
+  const { gradients, filterGradients } = props;
+
+  return (
+    <ul className='row list-unstyled'>
+      {gradients.map((gradient) => {
+        return (
+          <li className='col-lg-3 col-md-4 col-sm-6' key={gradient.name}>
+            <Gradient
+              filterGradients={filterGradients}
+              colorStart={gradient.start}
+              colorEnd={gradient.end}
+              name={gradient.name}
+              tags={gradient.tags}
+            />
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
+export default GradientsList;
