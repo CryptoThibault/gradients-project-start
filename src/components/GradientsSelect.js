@@ -11,6 +11,7 @@ const GradientsSelect = ({ uniqueTags, filterGradients }) => {
           className='form-select form-select mb-0.5'
           onChange={(e) => filterGradients(e.target.value)}
         >
+          <option value="all" key="all">Tous</option>
           {uniqueTags.map((tag) => {
             return (
               <option value={tag} key={tag}>

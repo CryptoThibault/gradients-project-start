@@ -8,11 +8,13 @@ function App() {
   const [gradientList, setGradientList] = useState(gradients);
 
   const filterGradients = (tag) => {
-    setGradientList(
-      gradients.filter((gradient) => gradient.tags.includes(tag))
-    );
+    if (tag === 'all') { setGradientList(gradients) }
+    else {
+      setGradientList(
+        gradients.filter((gradient) => gradient.tags.includes(tag))
+      );
+    };
   };
-
   return (
     <React.Fragment>
       <GradientsHeader gradients={gradients} />
