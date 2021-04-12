@@ -72,8 +72,13 @@ const GradientsHeader = ({ gradients }) => {
     if (!gradientIndex) { setGradientIndex(gradients.length - 1) }
   };
 
+  const backgroundImage = `linear-gradient(to right, ${gradients[gradientIndex].start}, ${gradients[gradientIndex].end} )`;
+  const style = {
+    backgroundImage
+  };
+
   return (
-    <header className='text-center bg-dark text-white py-5 mb-5' style={`linear-gradient(to right, ${gradients[gradientIndex].start}, ${gradients[gradientIndex].end} )`}>
+    <header className='text-center bg-dark text-white py-5 mb-5' style={style}>
       <h1 className='display-1 text-center my-4'>Alyra Gradients</h1>
       <p className='tagline'>Ultime collection de plus beaux dégradés</p>
       <button
