@@ -3,7 +3,7 @@ import React from 'react';
 const GradientsSelect = ({ uniqueTags,setFilter }) => {
   return (
     <form>
-      <div class="input-group mb-3" >
+      <div className="input-group mb-3" >
         <span className="input-group-text" id="select">Filtrer par tag</span>
         <select
           name='tags'
