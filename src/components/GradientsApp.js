@@ -8,6 +8,7 @@ const GradientsApp = ({ gradients, uniqueTags }) => {
     <main className='container'>
       <GradientsSelect
         uniqueTags={uniqueTags}
+        filter={filter}
         setFilter={setFilter}
       />
       <GradientsList gradients={gradients} filter={filter} setFilter={setFilter} />

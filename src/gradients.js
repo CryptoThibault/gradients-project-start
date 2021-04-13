@@ -152,7 +152,6 @@ export const gradients = [
 ]
 
 function allTags(list) {
-  /* retourner la liste des tags uniques */
   let listTotal = []
   for (let element of list) {
     if ("tags" in element) {
@@ -162,7 +161,6 @@ function allTags(list) {
   const listTagsUnique = []
   listTotal.forEach((el) => {
     if (!listTagsUnique.includes(el)) {
-      //listTagsUnique = listTagsUnique.concat([el])
       listTagsUnique.push(el)
     }
   })
