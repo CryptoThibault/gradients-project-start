@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const GradientsSelect = ({ uniqueTags, filterGradients }) => {
+const GradientsSelect = ({ uniqueTags,setFilter }) => {
   return (
     <form>
       <div class="input-group mb-3" >
@@ -9,7 +9,7 @@ const GradientsSelect = ({ uniqueTags, filterGradients }) => {
           name='tags'
           id='tags'
           className='form-select form-select mb-0.5'
-          onChange={(e) => filterGradients(e.target.value)}
+          onChange={(e) => setFilter(e.target.value)}
         >
           <option value="all" key="all">Tous</option>
           {uniqueTags.map((tag) => {

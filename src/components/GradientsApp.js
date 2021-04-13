@@ -1,15 +1,16 @@
+import { useState } from 'react';
 import GradientsList from './GradientsList';
 import GradientsSelect from './GradientsSelect';
 
-const GradientsApp = ({ gradients, uniqueTags, filterGradients }) => {
-
+const GradientsApp = ({ gradients, uniqueTags }) => {
+  const [filter, setFilter] = useState("all")
   return (
     <main className='container'>
       <GradientsSelect
         uniqueTags={uniqueTags}
-        filterGradients={filterGradients}
+        setFilter={setFilter}
       />
-      <GradientsList gradients={gradients} filterGradients={filterGradients} />
+      <GradientsList gradients={gradients} filter={filter} setFilter={setFilter} />
     </main>
   );
 };

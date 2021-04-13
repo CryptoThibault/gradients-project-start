@@ -1,10 +1,15 @@
 import React from 'react';
 
-const GradientTag = ({ filterGradients, tags }) => {
+
+const GradientTag = ({ filter, setFilter, tags }) => {
+  const handleButtonClick = (elem) => {
+    setFilter(elem.target.textContent)
+
+  }
   return (
     <div className="mt-3"  >
       {tags.map(elem =>
-        <button onClick={() => filterGradients(elem)} key={elem} className='btn btn-sm me-2 mb-2 text-light bg-dark' >{elem}</button>
+        <button onClick={(e) => handleButtonClick(e)} key={elem} className={filter === elem ? 'btn btn-sm me-2 mb-2 bg-light' : 'btn btn-sm me-2 mb-2 text-light bg-dark'} disable={filter === tags}>{elem}</button>
       )}
     </div>
   )
