@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GradientsSelect = ({ uniqueTags,filter, setFilter }) => {
+const GradientsSelect = ({ uniqueTags, filter, setFilter }) => {
   return (
     <form>
       <div className="input-group mb-3" >
